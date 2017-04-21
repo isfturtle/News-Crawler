@@ -20,7 +20,7 @@ app.use(bodyParser.urlencoded({
   extended: false
 }));
 
-mongoose.connect("mongodb://localhost/News-Crawler");
+mongoose.connect("mongodb://heroku_rhjkc031:a8k6eunciedu407615ej06vdh5@ds159200.mlab.com:59200/heroku_rhjkc031");
 // Hook mongoose connection to db
 var db = mongoose.connection;
 
