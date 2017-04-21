@@ -69,6 +69,7 @@ app.get("/", function(req, res){
 			});
 			//console.log(results);
 		});
+		res.render("stories",{stories: results})
 		for(var i=0; i<results.length; i++){
 			var story = new Story(results[i]);
 			story.save(function(error, doc){
@@ -81,7 +82,7 @@ app.get("/", function(req, res){
 			})
 		}
 	});
-})
+});
 
 
 
