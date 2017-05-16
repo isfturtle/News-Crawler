@@ -3,6 +3,9 @@ var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 
 var CommentSchema = new Schema({
+	author:{
+		type: String
+	},
 	body: {
 		type: String,
 		required: true
@@ -10,6 +13,10 @@ var CommentSchema = new Schema({
 	date: {
 		type: Date,
 		default: Date.now()
+	},
+	story: {
+		type: Schema.Types.ObjectId,
+		ref: "Story"
 	}
 });
 

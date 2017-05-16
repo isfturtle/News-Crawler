@@ -1,0 +1,30 @@
+<h2>{{story/headline}}</h2>
+<div class="panel panel-default">
+	<div class="panel-heading">
+		Add A Comment
+	</div>
+	<form action="/comments/add/{{story/_id}}" method="post">
+		<div class="row">
+			<div class="col-md-1">
+				Author: <input type="text" name="author">
+			</div>
+			<div class="col-md-11">
+				Comment: <input type="text" name="body" size=300><br><br>
+				<input type="submit" value="Submit">
+			</div>
+		</div>
+	</form>
+</div>
+{{#each story.comments}}
+<div class ="panel panel-default">
+	<div class="row">
+		<div class="col-md-1">
+			{{author}}<br>
+			{{date}}
+		</div>
+		<div class="col-md-10">
+			{{body}}
+		</div>
+	</div>
+</div>
+{{/each}}

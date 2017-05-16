@@ -22,6 +22,10 @@ var StorySchema = new Schema({
 	},
 	blurb: {
 		type: String
+	},
+	saved: {
+		type: Boolean,
+		default: false
 	}
 });
 
